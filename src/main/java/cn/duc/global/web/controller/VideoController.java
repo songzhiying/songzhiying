@@ -3,8 +3,6 @@ package cn.duc.global.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-
 /**
  * @描述
  * @作者 szy
