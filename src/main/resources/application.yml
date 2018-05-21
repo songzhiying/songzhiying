@@ -1,0 +1,37 @@
+server:
+  port: ${SERVICE_PORT:8000}
+  context-path: /api
+
+logging:
+  level:
+    org.springframework.cloud: 'DEBUG'
+    org.hibernate.type.descriptor.sql.BasicBinder: 'TRACE'
+
+spring:
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    tomcat:
+      max-active: 10
+      max-idle: 5
+      min-idle: 3
+      initial-size: 3
+      max-wait: 5000
+      test-on-borrow: true
+      test-while-idle: true
+      validation-interval: 30000
+      min-evictable-idle-time-millis: 30000
+      time-between-eviction-runs-millis: 30000
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+security:
+  basic:
+    authorize-mode: none
