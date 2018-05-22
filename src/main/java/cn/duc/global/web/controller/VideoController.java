@@ -18,6 +18,6 @@ public class VideoController {
  */
 	@GetMapping("/video")
 	public void addVideo() {
-		System.out.println("Hello World.");
+		System.out.println("Hello World.a");
 	}
 }
