@@ -2,10 +2,10 @@ server:
   port: ${SERVICE_PORT:8000}
   context-path: /api
 
-logging:
-  level:
-    org.springframework.cloud: 'DEBUG'
-    org.hibernate.type.descriptor.sql.BasicBinder: 'TRACE'
+#logging:
+#  level:
+#    org.springframework.cloud: 'DEBUG'
+#    org.hibernate.type.descriptor.sql.BasicBinder: 'TRACE'
 
 spring:
   profiles:
@@ -14,24 +14,38 @@ spring:
     ansi:
       enabled: always
   datasource:
-    tomcat:
-      max-active: 10
-      max-idle: 5
-      min-idle: 3
-      initial-size: 3
-      max-wait: 5000
-      test-on-borrow: true
-      test-while-idle: true
-      validation-interval: 30000
-      min-evictable-idle-time-millis: 30000
-      time-between-eviction-runs-millis: 30000
-  jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        use_sql_comments: true
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
 
-security:
-  basic:
-    authorize-mode: none
+#指定mybatis映射文件的地址
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.duc.global.repository.model
+
+  #mapper:
+  #    mappers:
+  #        - com.antsoft.database.BaseMapper
+  #    not-empty: false
+  #    identity: MYSQL
+
+pagehelper:
+   helperDialect: mysql
+   reasonable: true
+   supportMethodsArguments: true
+   params: count=countSql
+#security:
+#  basic:
+#    authorize-mode: none
