@@ -15,7 +15,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User getUser() {
-		//userMappering.deleteByPrimaryKey(1);
 		return userMappering.selectByPrimaryKey(1);
 	}
 }
