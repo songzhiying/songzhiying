@@ -4,7 +4,6 @@ package cn.duc.global.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import cn.duc.global.repository.model.User;
 import cn.duc.global.service.UserService;
 
 /**
@@ -23,8 +22,8 @@ public class TestController {
 	 * 测试
 	 * @return
 	 */
-	@GetMapping("/video")
+	/*@GetMapping("/video")
 	public User addVideo() {
 		return userServiceImpl.getUser();
-	}
+	}*/
 }
