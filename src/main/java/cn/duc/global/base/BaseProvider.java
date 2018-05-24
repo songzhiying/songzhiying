@@ -7,6 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.PageInfo;
 
+import plugin.BaseModel;
+
 public interface BaseProvider<T extends BaseModel> {
 
 	/**

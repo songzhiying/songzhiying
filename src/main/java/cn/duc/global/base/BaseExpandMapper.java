@@ -5,6 +5,8 @@ import java.util.Map;
 
 import com.github.pagehelper.Page;
 
+import plugin.BaseModel;
+
 public interface BaseExpandMapper<T extends BaseModel> {
 
 	public T query(Map<String, Object> params);

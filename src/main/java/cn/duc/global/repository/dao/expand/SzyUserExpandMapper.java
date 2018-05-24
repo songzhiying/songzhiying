@@ -1,10 +1,7 @@
 package cn.duc.global.repository.dao.expand;
 
-import cn.duc.global.base.BaseExpandMapper;
-import cn.duc.global.repository.model.generator.SzyUser;
-
 /**
  * SzyUserMapperExpand
  */
-public interface SzyUserExpandMapper extends BaseExpandMapper<SzyUser> {
+public interface SzyUserExpandMapper extends cn.duc.global.base.BaseExpandMapper<cn.duc.global.repository.model.generator.SzyUser> {
 }

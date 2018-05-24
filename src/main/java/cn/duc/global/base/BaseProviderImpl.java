@@ -20,6 +20,7 @@ import cn.duc.global.until.Constants;
 import cn.duc.global.until.DataUtil;
 import cn.duc.global.until.FieldUtil;
 import cn.duc.global.until.InstanceUtil;
+import plugin.BaseModel;
 
 public abstract class BaseProviderImpl<T extends BaseModel> implements BaseProvider<T> {
 

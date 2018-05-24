@@ -2,6 +2,8 @@ package cn.duc.global.base;
 
 import java.util.Map;
 
+import plugin.BaseModel;
+
 public interface BaseMapper<T extends BaseModel> {
 
 	int deleteByPrimaryKey(String id);

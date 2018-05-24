@@ -1,10 +1,7 @@
 package cn.duc.global.repository.dao.generator;
 
-import cn.duc.global.base.BaseMapper;
-import cn.duc.global.repository.model.generator.SzyUser;
-
 /**
  * create by MyBatis Generator, please don't modify
  */
-public interface SzyUserMapper extends BaseMapper<SzyUser> {
+public interface SzyUserMapper extends cn.duc.global.base.BaseMapper<cn.duc.global.repository.model.generator.SzyUser> {
 }
