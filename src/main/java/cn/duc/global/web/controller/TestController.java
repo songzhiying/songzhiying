@@ -1,6 +1,7 @@
 package cn.duc.global.web.controller;
 
 
+import cn.duc.global.repository.model.generator.SzyUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +23,8 @@ public class TestController {
 	 * 测试
 	 * @return
 	 */
-	/*@GetMapping("/video")
-	public User addVideo() {
+	@GetMapping("/video")
+	public SzyUser addVideo() {
 		return userServiceImpl.getUser();
-	}*/
+	}
 }

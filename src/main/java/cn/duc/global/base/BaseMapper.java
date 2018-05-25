@@ -6,19 +6,19 @@ import plugin.BaseModel;
 
 public interface BaseMapper<T extends BaseModel> {
 
-	int deleteByPrimaryKey(String id);
+	public int deleteByPrimaryKey(String id);
 
-	int deleteByPrimaryKey(Map<String, Object> params);
+	public	int deleteByPrimaryKey(Map<String, Object> params);
 
-	T selectByPrimaryKey(String id);
+	public T selectByPrimaryKey(String id);
 
-	int insert(T record);
+	public int insert(T record);
 
-	int insertSelective(T record);
+	public int insertSelective(T record);
 
-	int updateByPrimaryKeyWithBLOBs(T record);
+	public int updateByPrimaryKeyWithBLOBs(T record);
 
-	int updateByPrimaryKey(T record);
+	public int updateByPrimaryKey(T record);
 
-	int updateByPrimaryKeySelective(T record);
+	public int updateByPrimaryKeySelective(T record);
 }

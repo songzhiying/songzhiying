@@ -1,6 +1,8 @@
 package cn.duc.global.service;
 
-public interface UserService {
+import cn.duc.global.repository.model.generator.SzyUser;
 
+public interface UserService {
+    SzyUser getUser();
 
 }
